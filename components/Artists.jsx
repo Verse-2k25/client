@@ -8,7 +8,7 @@ import Link from "next/link"
 export default function Artists(){
 
     return(
-        <section className="py-16 px-32">
+        <section className="py-16 px-32 bg-[#41362A] bg-opacity-85">
         <h2 className="text-2xl font-bold text-white text-center mb-12">TUNE IN NOW</h2>
         <div className="flex justify-between items-center">
           {[
