@@ -3,17 +3,12 @@ import {motion} from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image"
 import Link from "next/link"
-import AboutUs from "@/components/AboutUs";
-import Features from "@/components/Features";
-import Artists from "@/components/Artists";
-import HowIt from "@/components/HowIt";
-import ContactUs from "@/components/ContactUs";
-import Footer from "@/components/Footer";
 
-export default function Home() {
+
+export default function Hero() {
   
   return (
-    <div className="min-h-screen bg-[#EDE5D9]">
+    <div className="min-h-screen bg-gray-800">
       {/* Navigation */}
       <nav className="border-b border-gray-800">
         {/* Upper Section */}
@@ -89,16 +84,21 @@ export default function Home() {
     </svg>
 </div>
       </div>
+     
+   
+      {/* About Section */}
+      
+   
+  
+   {/* <div class="custom-shape-divider-top-1738904011">
+ <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 119" preserveAspectRatio="none">
+     <path  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+ </svg>
+</div> */}
+      </div>
+    
 
-     <AboutUs/>
-      <Features/>
-
-          <Artists/>
-      <HowIt/>
-     <ContactUs/>
- 
-     <Footer/>
-    </div>
+    
   )
 }
 
