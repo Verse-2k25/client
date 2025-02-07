@@ -31,15 +31,10 @@ export default function HowIt() {
                 <span className="text-4xl font-bold mb-4"></span>
                 {step.number}
               </div>
-<<<<<<< HEAD
-              <div className="bg-[#41362A] p-8 rounded-lg text-center min-h-[200px] flex flex-col items-center justify-center">
-                <h3 className="text-white text-xl font-medium mb-4">{step.title}</h3>
-                <p className="text-gray-400 text-sm">{step.description}</p>
-=======
               <div className="bg-[#41362A] bg-opacity-45 p-8 rounded-lg text-center min-h-[200px] flex flex-col items-center justify-center">
                 <h3 className="text-white text-xl font-bold mb-4">{step.title}</h3>
                 <p className="text-white font-medium text-sm">{step.description}</p>
->>>>>>> 9ddc5136db0262d7fb9da968b96c3976a39fd267
+
               </div>
             </div>
           ))}
