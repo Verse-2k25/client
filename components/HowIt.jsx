@@ -30,7 +30,7 @@ export default function HowIt() {
               "Start playing music and chat with your friends in real time. Create memories together",
           },
         ].map((step, index) => (
-          <div key={index} className="relative pt-8">
+          <div key={index} className="relative pt-8 transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#D77E1D] bg-opacity-60 flex items-center justify-center text-white font-bold text-xl">
               {step.number}
             </div>
