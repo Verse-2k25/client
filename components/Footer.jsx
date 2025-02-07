@@ -64,12 +64,12 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className="mt-16 pt-8 border-t border-gray-800 flex justify-between items-center text-sm text-gray-400">
         <div className="flex gap-8">
-          <link href="#" className="hover:text-white">
+          <Link href="#" className="hover:text-white">
             Terms of Use
-          </link>
-          <link href="#" className="hover:text-white">
+          </Link>
+          <Link href="#" className="hover:text-white">
             Privacy Policy
-          </link>
+          </Link>
         </div>
         <div>© 2025 VERSE</div>
       </div>
