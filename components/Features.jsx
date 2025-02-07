@@ -8,7 +8,7 @@ import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 export default function Features() {
   return (
     <section className="py-16 px-31">
-      <h2 className="text-2xl font-bold text-white text-center mb-12">FEATURES</h2>
+      <h2 className="text-3xl font-bold text-black text-center mb-12">FEATURES</h2>
       <div className="grid grid-cols-3 gap-4">
         {[
           {
