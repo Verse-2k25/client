@@ -1,4 +1,5 @@
 import { MessageCircle, Music2, Radio, Search, Users } from "lucide-react"
+import { SignInButton, SignOutButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import {motion} from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image"
@@ -19,7 +20,7 @@ export default function Home() {
         {/* Upper Section */}
         <div className="flex items-stretch justify-between relative">
           <div className="flex items-center border-r border-gray-800">
-            <div className="flex items-center gap-4 px-4 py-5">
+            {/* <div className="flex items-center gap-4 px-4 py-5">
               <Link href="#" className="text-gray-400 hover:text-white">
                 LOG IN
               </Link>
@@ -27,7 +28,23 @@ export default function Home() {
               <Link href="#" className="text-gray-400 hover:text-white">
                 JOIN
               </Link>
-            </div>
+            </div> */}
+                <SignedOut>
+                <SignInButton>
+                  <button className="text-gray-400 hover:text-white">LOG IN</button>
+                </SignInButton>
+                <span className="text-gray-400">|</span>
+                <Link href="/sign-up" className="text-gray-400 hover:text-white">
+                  JOIN
+                </Link>
+              </SignedOut>
+
+              <SignedIn>
+                <UserButton afterSignOutUrl="/" />
+                <SignOutButton>
+                  <button className="text-gray-400 hover:text-white">LOG OUT</button>
+                </SignOutButton>
+            </SignedIn>
           </div>
           <div className="text-white text-xl font-bold absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             VERSE
@@ -83,7 +100,7 @@ export default function Home() {
      
     </section>
 
-      <div class="custom-shape-divider-top-1738904011">
+      <div className="custom-shape-divider-top-1738904011">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 119" preserveAspectRatio="none">
         <path fill="#41362A" d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
     </svg>
