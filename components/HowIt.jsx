@@ -27,7 +27,7 @@ export default function HowIt() {
             },
           ].map((step, index) => (
             <div key={index} className="relative pt-8">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#4DB6AC] flex items-center justify-center text-white font-bold text-xl">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#D77E1D] flex items-center justify-center text-white font-bold text-xl">
                 {step.number}
               </div>
               <div className="bg-[#0F1318] p-8 rounded-lg text-center min-h-[200px] flex flex-col items-center justify-center">
