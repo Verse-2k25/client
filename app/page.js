@@ -10,7 +10,7 @@ import Artists from "@/components/Artists";
 import HowIt from "@/components/HowIt";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
-import Selection from "@/components/Selection/selection";
+import Selection from "@/app/Selection/Election";
 import { Script } from "next/script";
 import Chatbot from "@/components/chatbot/chatbot";
 export default function Home() {
@@ -43,7 +43,7 @@ export default function Home() {
                 </Link>
               </SignedOut>
 
-              <SignedIn>
+              <SignedIn signInForceRedirectUrl="/Selection/election">
                 <UserButton afterSignOutUrl="/" />
                 <SignOutButton>
                   <button className="text-gray-400 hover:text-white">LOG OUT</button>

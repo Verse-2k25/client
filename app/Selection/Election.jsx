@@ -1,3 +1,10 @@
+
+
+// const CLIENT_ID = "51a215f6113744d7bd6930816f384850"
+// const CLIENT_SECRET = "0850771e9054447295bf0bf8d1c44b65"
+
+
+
 "use client"
 
 import { useState, useEffect } from "react"
@@ -9,47 +16,48 @@ const CLIENT_ID = "51a215f6113744d7bd6930816f384850"
 const CLIENT_SECRET = "0850771e9054447295bf0bf8d1c44b65"
 
 const genres = [
-  "pop",
-  "rock",
-  "hip-hop",
-  "jazz",
-  "classical",
-  "edm",
-  "indie",
-  "blues",
-  "country",
-  "metal",
-  "reggae",
-  "folk",
-  "R&B",
-  "soul",
-  "funk",
-  "techno",
-  "house",
-  "trance",
-  "dubstep",
-  "punk",
-  "alternative",
-  "grunge",
-  "disco",
-  "ska",
-  "bluegrass",
-  "gospel",
-  "orchestra",
-  "synthwave",
-  "lo-fi",
-  "k-pop",
-  "j-pop",
-  "c-pop",
-  "latin",
-  "afrobeats",
-  "bollywood",
-]
+    "pop",
+    "rock",
+    "hip-hop",
+    "jazz",
+    "classical",
+    "edm",
+    "indie",
+    "blues",
+    "country",
+    "metal",
+    "reggae",
+    "folk",
+    "R&B",
+    "soul",
+    "funk",
+    "techno",
+    "house",
+    "trance",
+    "dubstep",
+    "punk",
+    "alternative",
+    "grunge",
+    "disco",
+    "ska",
+    "bluegrass",
+    "gospel",
+    "orchestra",
+    "synthwave",
+    "lo-fi",
+    "k-pop",
+    "j-pop",
+    "c-pop",
+    "latin",
+    "afrobeats",
+    "bollywood",
+  ]
 
-export default function Selectoion() {
+export default function Election({ userId }) {
   const [token, setToken] = useState("")
   const [artists, setArtists] = useState([])
   const [selectedGenres, setSelectedGenres] = useState([])
+  const [selectedArtists, setSelectedArtists] = useState([])
 
   useEffect(() => {
     const getToken = async () => {
@@ -91,6 +99,21 @@ export default function Selectoion() {
     setSelectedGenres((prev) => (prev.includes(genre) ? prev.filter((g) => g !== genre) : [...prev, genre]))
   }
 
+  const handleArtistSelect = (artist) => {
+    setSelectedArtists((prev) => (prev.includes(artist) ? prev.filter((a) => a !== artist) : [...prev, artist]))
+  }
+
+  const saveSelection = async () => {
+    try {
+      const response = await axios.post("/api/saveSelections", {
+        userId, selectedGenres, selectedArtists
+      })
+      alert("Selection saved successfully!")
+    } catch (error) {
+      console.error("Error saving selection:", error)
+    }
+  }
+
   useEffect(() => {
     fetchArtists()
   }, [selectedGenres, token])
@@ -104,17 +127,8 @@ export default function Selectoion() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {genres.map((genre) => (
             <div key={genre} className="flex items-center space-x-2">
-              <Checkbox
-                id={genre}
-                checked={selectedGenres.includes(genre)}
-                onCheckedChange={() => handleGenreToggle(genre)}
-              />
-              <label
-                htmlFor={genre}
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                {genre.charAt(0).toUpperCase() + genre.slice(1)}
-              </label>
+              <Checkbox id={genre} checked={selectedGenres.includes(genre)} onCheckedChange={() => handleGenreToggle(genre)} />
+              <label htmlFor={genre} className="text-sm font-medium">{genre.charAt(0).toUpperCase() + genre.slice(1)}</label>
             </div>
           ))}
         </div>
@@ -122,14 +136,10 @@ export default function Selectoion() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {artists.map((artist) => (
-          <Card key={artist.id} className="overflow-hidden bg-gray-800 text-white">
+          <Card key={artist.id} className="overflow-hidden bg-gray-800 text-white cursor-pointer" onClick={() => handleArtistSelect(artist.name)}>
             <CardContent className="p-0">
               <div className="relative aspect-square">
-                <img
-                  src={artist.images[0]?.url || "/placeholder.svg"}
-                  alt={artist.name}
-                  className="object-cover w-full h-full"
-                />
+                <img src={artist.images[0]?.url || "/placeholder.svg"} alt={artist.name} className="object-cover w-full h-full" />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end p-4">
                   <div>
                     <h3 className="text-xl font-bold">{artist.name}</h3>
@@ -142,10 +152,7 @@ export default function Selectoion() {
         ))}
       </div>
 
-      {artists.length === 0 && selectedGenres.length > 0 && (
-        <p className="text-center text-xl mt-8">No artists found for the selected genres.</p>
-      )}
+      <button onClick={saveSelection} className="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-bold">Save Selection</button>
     </div>
   )
 }
-
