@@ -10,11 +10,14 @@ import Artists from "@/components/Artists";
 import HowIt from "@/components/HowIt";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
+import Selection from "@/components/Selection/selection";
 
 export default function Home() {
   
   return (
     <div className="min-h-screen bg-[#EDE5D9]">
+ 
+      {/* <Selection/> */}
       {/* Navigation */}
       <nav className="border-b border-gray-800">
         {/* Upper Section */}
