@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F1318] py-16 px-32">
+    <footer className="bg-[#252422] py-16 px-32">
       <div className="grid grid-cols-12 gap-8">
         {/* Logo Section */}
         <div className="col-span-3">
@@ -21,18 +21,18 @@ export default function Footer() {
         <div className="col-span-6">
           <div className="grid grid-cols-2 gap-8">
             <div className="space-y-4">
-              <Link href="#" className="block text-white hover:text-[#4DB6AC]">
+              <Link href="#" className="block text-white font-medium hover:text-[#D77E1D]">
                 ABOUT US
               </Link>
-              <Link href="#" className="block text-white hover:text-[#4DB6AC]">
+              <Link href="#" className="block text-white font-medium hover:text-[#D77E1D]">
                 HELP & FAQ
               </Link>
             </div>
             <div className="space-y-4">
-              <Link href="#" className="block text-white hover:text-[#4DB6AC]">
+              <Link href="#" className="block text-white font-medium hover:text-[#D77E1D]">
                 ALBUMS
               </Link>
-              <Link href="#" className="block text-white hover:text-[#4DB6AC]">
+              <Link href="#" className="block text-white font-medium hover:text-[#D77E1D]">
                 PLAYLISTS
               </Link>
             </div>
