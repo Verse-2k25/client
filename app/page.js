@@ -83,7 +83,7 @@ export default function Home() {
               Create your own private music room, invite friends and enjoy synchronized music playback while chatting in
               real time.
             </p>
-            <button className="parallelogram-button bg-[#D77E1D] text-white font-bold py-4 px-16 hover:bg-[#3D9089] transition-all uppercase tracking-wider">
+            <button className="parallelogram-button bg-[#D77E1D] text-white font-bold py-4 px-16 hover:bg-[#D77E2D] transition-all uppercase tracking-wider">
               <span>TRY OUT NOW</span>
             </button>
           </div>
