@@ -6,69 +6,20 @@ import Image from "next/image";
 import Link from "next/link";
 import AboutUs from "@/components/AboutUs";
 import Features from "@/components/Features";
-import Artists from "@/components/Artists";
 import HowIt from "@/components/HowIt";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/chatbot/chatbot";
-import Election from "@/app/Selection/Election";
+// import Election from "@/app/Selection/Election";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   const [signedIn, setSignedIn] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#EDE5D9]">
-      <Chatbot />
-
-      {/* Navigation */}
-      <nav className="border-b border-gray-800">
-        <div className="flex items-stretch justify-between relative">
-          <div className="flex items-center border-r border-gray-800">
-            <SignedOut>
-              <SignInButton>
-                <button className="text-[#41362A] hover:text-white">SIGN IN</button>
-              </SignInButton>
-              <span className="text-gray-400">|</span>
-              <Link href="/sign-up" className="text-gray-400 hover:text-white">
-                JOIN
-              </Link>
-            </SignedOut>
-
-            <SignedIn>
-              <UserButton afterSignOutUrl="/Selection/election" />
-              <SignOutButton>
-                <button className="text-[#41362A] hover:text-white" onClick={() => setSignedIn(false)}>
-                  LOG OUT
-                </button>
-              </SignOutButton>
-            </SignedIn>
-          </div>
-         
-          <div className="text-[#41362A] text-3xl font-bold tracking-widest absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-  VERSE
-</div>
-          <div className="flex items-center border-l border-gray-800">
-            <div className="px-4 py-5">
-              <Link href="/Selection/election">
-                <button className="text-[#41362A] hover:text-white">
-                  <Search className="w-5 h-5" />
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="h-px bg-gray-800"></div>
-
-        <div className="flex items-center justify-center gap-12 p-4">
-          {["HOME", "FEATURES", "TUNE IN", "HANG OUT", "MORE"].map((item) => (
-            <Link key={item} href="#" className="text-[#41362A] hover:text-white">
-              {item}
-            </Link>
-          ))}
-        </div>
-      </nav>
+      
 
       {/* Hero Section */}
       <div>
@@ -110,8 +61,9 @@ export default function Home() {
 
       <AboutUs />
       <Features />
-     
-      <Election />
+      <Chatbot />
+      {/* <Election /> */}
+
       <HowIt />
       <ContactUs />
       <Footer />

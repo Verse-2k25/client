@@ -115,15 +115,15 @@ export default function Election({ userId }) {
   }, [selectedGenres, token])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[[#41362A]] to-[[#41362A]] text-white p-8">
-      <h1 className="text-4xl font-bold text-center mb-8">Discover Artists by Genre</h1>
+    <div className="min-h-screen bg-gradient-to-br from-[#41362A] to-[#41362A] text-white p-5">
+      <h1 className="text-4xl mt-8 font-bold text-center mb-8">Discover Artists by Genre</h1>
 
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Select Genres</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <h2 className="text-2xl font-semibold text-center mb-6">Select Genres</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {genres.map((genre) => (
             <div key={genre} className="flex items-center space-x-2">
-              <Checkbox id={genre} checked={selectedGenres.includes(genre)} onCheckedChange={() => handleGenreToggle(genre)} />
+              <Checkbox id={genre} checked={selectedGenres.includes(genre)} onCheckedChange={() => handleGenreToggle(genre)}className="text-white border-white checked:bg-white checked:border-white"/>
               <label htmlFor={genre} className="text-sm font-medium">{genre.charAt(0).toUpperCase() + genre.slice(1)}</label>
             </div>
           ))}
@@ -148,7 +148,7 @@ export default function Election({ userId }) {
         ))}
       </div>
 
-      <button onClick={saveSelection} className="mt-8 px-6 py-3 bg-[#D77E1D] hover:bg-[#D77E1D] rounded-lg text-white font-bold">Save Selection</button>
+      <button onClick={saveSelection} className="mt-8 mb-6 mx-auto block justify-center rounded-md border-2 border-[#D77E1D] text-white font-bold py-4 px-16 hover:bg-[#D77E1D] hover:text-white uppercase tracking-wider px-6 py-3 bg-[#D77E1D] hover:bg-transparent rounded-lg text-white  font-bold">Save Selection</button>
     </div>
   )
 }

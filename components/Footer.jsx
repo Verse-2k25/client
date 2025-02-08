@@ -1,67 +1,74 @@
-import { Facebook, Twitter, Instagram, Youtube,  } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 import Image from "next/image";
 import Link from "next/link";
 
+// components/Footer.js
 export default function Footer() {
   return (
-    <footer className="bg-[#252422] py-16 px-32">
-      <div className="grid grid-cols-12 gap-8">
-        {/* Logo Section */}
-        <div className="col-span-3">
-          <Image
-            src={`/logo-main.png`}
-            alt="Vortex Logo"
-            width={150}
-            height={150}
-            className="brightness-0 invert"
-          />
-        </div>
+      <footer className="text-center text-lg-start text-white bg-[#222222]">
 
-        {/* Links Section */}
-        <div className="col-span-6">
-          <div className="grid grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <Link href="#" className="block text-white font-medium hover:text-[#D77E1D]">
-                ABOUT US
-              </Link>
-              <Link href="#" className="block text-white font-medium hover:text-[#D77E1D]">
-                HELP & FAQ
-              </Link>
-            </div>
-            <div className="space-y-4">
-              <Link href="#" className="block text-white font-medium hover:text-[#D77E1D]">
-                ALBUMS
-              </Link>
-              <Link href="#" className="block text-white font-medium hover:text-[#D77E1D]">
-                PLAYLISTS
-              </Link>
-            </div>
-          </div>
-        </div>
+        <div className="container p-4 pb-0">
+      
+          <section>
 
-        {/* Social Media Section */}
-        <div className="col-span-3">
-          <h3 className="text-white font-bold mb-6">FOLLOW VERSE</h3>
-          <div className="flex gap-4">
-            {[
-              { name: "Facebook", icon: Facebook },
-              { name: "Twitter", icon: Twitter },
-              { name: "Instagram", icon: Instagram },
-              { name: "YouTube", icon: Youtube },
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+              <div className="mt-3">
+                <h6 className="text-uppercase mb-4 font-bold"> VERSE</h6>
+                <p>
+                  Here you can use rows and columns to organize your footer
+                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.
+                </p>
+              </div>
+
+              <div className="mt-3">
+                <p> <a className="text-white hover:underline">About Us</a></p>
+                <p><a className="text-white hover:underline">Hang Out</a></p>
+                <p><a className="text-white hover:underline">Tune In</a></p>
+                <p><a className="text-white hover:underline">Dashboard</a></p>
              
-            ].map((social, index) => (
-              <Link key={index} href="#" className="text-gray-400 hover:text-white transition-colors">
-                <span className="sr-only">{social.name}</span>
-                <div className="w-10 h-10 bg-gray-800 rounded flex items-center justify-center">
-                  <social.icon className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+              </div>
 
+              <div className="mt-3 mb-4">
+                <h6 className="text-uppercase mb-4 font-bold">Contact</h6>
+                <p><i className="fas fa-home mr-3"></i> Verse, Tritans</p>
+                <p><i className="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                <p><i className="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                
+              </div>
+
+              <div className="mt-3">
+  <h6 className="text-uppercase mb-4 font-bold">Follow us</h6>
+
+  <div className="flex space-x-2 flex-nowrap">
+    <a className="btn btn-primary m-1 bg-blue-600 p-2 rounded-full" href="#!" role="button">
+      <Facebook className="text-white w-5 h-5" />
+    </a>
+    <a className="btn btn-primary m-1 bg-blue-400 p-2 rounded-full" href="#!" role="button">
+      <Twitter className="text-white w-5 h-5" />
+    </a>
+    <a className="btn btn-primary m-1 bg-purple-600 p-2 rounded-full" href="#!" role="button">
+      <Instagram className="text-white w-5 h-5" />
+    </a>
+    <a className="btn btn-primary m-1 bg-blue-800 p-2 rounded-full" href="#!" role="button">
+      <Linkedin className="text-white w-5 h-5" />
+    </a>
+  </div>
+</div>
+
+            </div>
+   
+          </section>
+
+        </div>
+        <div className="text-center p-3 bg-black bg-opacity-20">
+          © 2025 Copyright:
+          <a className="text-white hover:underline" href="https://mdbootstrap.com/">VERSE</a>
+        </div>
+      </footer>
      
-    </footer>
+   
   );
 }
+
