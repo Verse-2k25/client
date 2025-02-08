@@ -10,15 +10,17 @@ export default function FriendRecommendations() {
   const [error, setError] = useState(null)
 
   const fetchRecommendations = async () => {
-    if (!userId) return
+    const userId = Math.floor(Math.random() * 20) + 1; 
+  
     try {
-      const response = await axios.get(`http://localhost:5000/recommendations/${userId}`)
-      setRecommendations(response.data)
-      setError(null)
+      const response = await axios.get(`http://localhost:5000/recommendations/${userId}`);
+      setRecommendations(response.data);
+      setError(null);
     } catch (error) {
-      setError("Failed to fetch recommendations. Ensure the backend is running.")
+      setError("Failed to fetch recommendations. Ensure the backend is running.");
     }
-  }
+  };
+  
 
 
   const convertToArray = (value) => {
@@ -32,13 +34,13 @@ export default function FriendRecommendations() {
       <div className="">
         <h1 className="text-4xl font-bold mb-8 text-center text-[#D77E1D]">Friend Recommendations</h1>
         <div className="flex items-center space-x-4 mb-8 text-black">
-          <input
+          {/* <input
             type="number"
             value={userId}
             onChange={(e) => setUserId(e.target.value)}
             placeholder="Enter User ID"
             className="p-3 border-2 border-indigo-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200"
-          />
+          /> */}
           <button
             onClick={fetchRecommendations}
             className="bg-[#D77E1D]  text-white px-6 py-3 rounded-lg transition duration-200 transform hover:scale-105"

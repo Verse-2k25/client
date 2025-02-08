@@ -4,19 +4,19 @@ import Image from 'next/image';
 const Dashboard = () => {
   return (
     <div className="min-h-screen bg-[#f5e6d3] p-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-12 gap-2">
         {/* Top Row */}
-        <div className="bg-[#e6d5bc] rounded-lg shadow-md p-4">
+        <div className="md:col-span-3 flex justify-center items-center bg-[#e6d5bc] rounded-lg shadow-md p-3">
           <Image
             src="/most-streamed-tracks.png"
             alt="Most streamed tracks"
             width={400}
             height={300}
-            className="w-full h-auto"
+            className="w-full"
           />
         </div>
         
-        <div className="bg-[#e6d5bc] rounded-lg shadow-md p-4 md:col-span-2">
+        <div className="md:col-span-6 bg-[#e6d5bc] rounded-lg shadow-md p-4">
           <Image
             src="/streams-chart.png"
             alt="Streams chart"
@@ -27,7 +27,7 @@ const Dashboard = () => {
         </div>
 
         {/* Statistics Cards */}
-        <div className="flex flex-col gap-4 md:row-start-1 md:col-start-3">
+        <div className="md:col-span-3 flex flex-col gap-4">
           <div className="bg-[#e6d5bc] rounded-lg shadow-md p-4">
             <Image
               src="/total-streams.png"
@@ -50,7 +50,7 @@ const Dashboard = () => {
         </div>
 
         {/* Bottom Row */}
-        <div className="bg-[#e6d5bc] rounded-lg shadow-md p-4 md:col-span-2">
+        <div className="md:col-span-7 bg-[#e6d5bc] rounded-lg shadow-md p-4">
           <Image
             src="/artist-stats.png"
             alt="Artist statistics"
@@ -60,7 +60,7 @@ const Dashboard = () => {
           />
         </div>
         
-        <div className="bg-[#e6d5bc] rounded-lg shadow-md p-4">
+        <div className="md:col-span-5 bg-[#e6d5bc] rounded-lg shadow-md p-4">
           <Image
             src="/artist-distribution.png"
             alt="Artist distribution"

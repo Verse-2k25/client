@@ -87,11 +87,11 @@ export default function Navbar() {
                         <Link href="/tune-in" className="text-[#E8DED4] hover:text-white text-sm font-medium">
                             TUNE IN
                         </Link>
-                        <Link href="/hang-out" className="text-[#E8DED4] hover:text-white text-sm font-medium">
+                        <Link href="/recommendation" className="text-[#E8DED4] hover:text-white text-sm font-medium">
                             HANG OUT
                         </Link>
-                        <Link href="/more" className="text-[#E8DED4] hover:text-white text-sm font-medium">
-                            MORE
+                        <Link href="/dashboard" className="text-[#E8DED4] hover:text-white text-sm font-medium">
+                            DASHBOARD
                         </Link>
                     </div>
 
