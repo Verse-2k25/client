@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Logo Section */}
         <div className="col-span-3">
           <Image
-            src={``}
+            src={`/logo-main.png`}
             alt="Vortex Logo"
             width={150}
             height={150}
@@ -61,18 +61,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Footer */}
-      <div className="mt-16 pt-8 border-t border-gray-800 flex justify-between items-center text-sm text-gray-400">
-        <div className="flex gap-8">
-          <Link href="#" className="hover:text-white">
-            Terms of Use
-          </Link>
-          <Link href="#" className="hover:text-white">
-            Privacy Policy
-          </Link>
-        </div>
-        <div>© 2025 VERSE</div>
-      </div>
+     
     </footer>
   );
 }

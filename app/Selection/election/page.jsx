@@ -1,10 +1,6 @@
 
-
 // const CLIENT_ID = "51a215f6113744d7bd6930816f384850"
 // const CLIENT_SECRET = "0850771e9054447295bf0bf8d1c44b65"
-
-
-
 "use client"
 
 import { useState, useEffect } from "react"
@@ -119,7 +115,7 @@ export default function Election({ userId }) {
   }, [selectedGenres, token])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[[#41362A]] to-[[#41362A]] text-white p-8">
       <h1 className="text-4xl font-bold text-center mb-8">Discover Artists by Genre</h1>
 
       <div className="mb-8">
@@ -152,7 +148,7 @@ export default function Election({ userId }) {
         ))}
       </div>
 
-      <button onClick={saveSelection} className="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-bold">Save Selection</button>
+      <button onClick={saveSelection} className="mt-8 px-6 py-3 bg-[#D77E1D] hover:bg-[#D77E1D] rounded-lg text-white font-bold">Save Selection</button>
     </div>
   )
 }
