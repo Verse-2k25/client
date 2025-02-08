@@ -9,7 +9,7 @@ export default function ContactUs() {
 
     return(
         <section className="py-16 px-32 bg-[#41362A]">
-        <h2 className="text-2xl font-bold text-white text-center mb-12">CONTACT US</h2>
+        <h2 className="text-2xl font-bold text-white text-center mb-12">FEEDBACK</h2>
         <div className="max-w-2xl mx-auto">
           <form className="space-y-6">
             <div>

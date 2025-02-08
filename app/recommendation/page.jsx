@@ -28,10 +28,10 @@ export default function FriendRecommendations() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-indigo-200 p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center text-indigo-800">Friend Recommendations</h1>
-        <div className="flex items-center space-x-4 mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#EDE5D9] to-[#EDE5D9] p-8">
+      <div className="">
+        <h1 className="text-4xl font-bold mb-8 text-center text-[#D77E1D]">Friend Recommendations</h1>
+        <div className="flex items-center space-x-4 mb-8 text-black">
           <input
             type="number"
             value={userId}
@@ -41,7 +41,7 @@ export default function FriendRecommendations() {
           />
           <button
             onClick={fetchRecommendations}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition duration-200 transform hover:scale-105"
+            className="bg-[#D77E1D]  text-white px-6 py-3 rounded-lg transition duration-200 transform hover:scale-105"
           >
             Get Recommendations
           </button>

@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
           {/* <header className="p-4 border-b border-gray-800 text-center text-lg font-bold">
             VERSE
           </header> */}
-          <main className="min-h-screen flex flex-col items-center justify-center">
+          <main className="min-h-screen ">
             {children}
           </main>
           {/* <footer className="p-4 border-t border-gray-800 text-center text-sm text-gray-400">
