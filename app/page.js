@@ -1,4 +1,4 @@
-"use client"
+
 
 import { MessageCircle, Music2, Radio, Search, Users } from "lucide-react";
 import { SignInButton, SignOutButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
@@ -11,15 +11,18 @@ import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/chatbot/chatbot";
 // import Election from "@/app/Selection/Election";
-import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { currentUser } from "@clerk/nextjs/server";
+import { cookies } from "next/headers";
 
-export default function Home() {
-  const [signedIn, setSignedIn] = useState(false);
+export default async function Page() {
+
+  // const user = await currentUser();
+  // console.log(user)
 
   return (
     <div className="min-h-screen bg-[#EDE5D9]">
-      
+
 
       {/* Hero Section */}
       <div>
@@ -40,7 +43,7 @@ export default function Home() {
           </div>
 
           <div className="relative flex justify-center items-center">
-            {signedIn ? (
+            {SignedIn ? (
               <Image src="/hero.png" alt="Hero Image" width={700} height={700} className="transition-all duration-300" />
             ) : (
               <Image src="/hero.png" alt="Hero Image" width={500} height={500} />
@@ -62,7 +65,7 @@ export default function Home() {
       <AboutUs />
       <Features />
       <Chatbot />
-      {/* <Election /> */}
+      {/* <Election  /> */}
 
       <HowIt />
       <ContactUs />

@@ -1,6 +1,8 @@
-import { clerkMiddleware } from '@clerk/nextjs/server';
+import { clerkMiddleware, currentUser } from '@clerk/nextjs/server';
+import { cookies } from 'next/headers';
 
 export default clerkMiddleware();
+
 
 export const config = {
   matcher: [
