@@ -14,34 +14,22 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
             
               <div className="mt-3">
-                <h6 className="text-uppercase mb-4 font-bold"> VERSE</h6>
-                <p>
-                  Here you can use rows and columns to organize your footer
-                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit.
-                </p>
+                <h1 className="text-uppercase text-3xl mb-6 mt-9 font-bold tracking-widest "> VERSE</h1>
               </div>
 
-              <div className="mt-3">
-                <p> <a className="text-white hover:underline">About Us</a></p>
-                <p><a className="text-white hover:underline">Hang Out</a></p>
-                <p><a className="text-white hover:underline">Tune In</a></p>
-                <p><a className="text-white hover:underline">Dashboard</a></p>
              
-              </div>
-
-              <div className="mt-3 mb-4">
-                <h6 className="text-uppercase mb-4 font-bold">Contact</h6>
+              <div className="mt-5 mb-4 text-center">
+                <h6 className="text-uppercase mb-4 text-2xl font-bold">Contact</h6>
                 <p><i className="fas fa-home mr-3"></i> Verse, Tritans</p>
                 <p><i className="fas fa-envelope mr-3"></i> info@gmail.com</p>
                 <p><i className="fas fa-phone mr-3"></i> + 01 234 567 88</p>
                 
               </div>
 
-              <div className="mt-3">
-  <h6 className="text-uppercase mb-4 font-bold">Follow us</h6>
+              <div className="mt-3 text-right ml-auto ">
+  <h3 className="text-uppercase mb-4 font-bold">Follow us</h3>
 
-  <div className="flex space-x-2 flex-nowrap">
+  <div className="flex justify-end m-1 space-x-2 flex-nowrap">
     <a className="btn btn-primary m-1 bg-blue-600 p-2 rounded-full" href="#!" role="button">
       <Facebook className="text-white w-5 h-5" />
     </a>
