@@ -44,7 +44,7 @@ export default async function Page() {
 
           <div className="relative flex justify-center items-center">
             {SignedIn ? (
-              <Image src="/hero.png" alt="Hero Image" width={700} height={700} className="transition-all duration-300" />
+              <Image src="/hero.png" alt="Hero Image" width={500} height={500} className="transition-all duration-300" />
             ) : (
               <Image src="/hero.png" alt="Hero Image" width={500} height={500} />
             )}
