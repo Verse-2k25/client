@@ -65,7 +65,7 @@ const Chatbot = () => {
     <div className="min-h-screen bg-[#EDE5D9] p-4 flex items-center justify-center">
       <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden">
         <div className="bg-[#41362A] p-6 text-[#EDE5D9]">
-          <h1 className="text-2xl font-bold">Chat with Ollama</h1>
+          <h1 className="text-2xl font-bold text-center ">Meewli ♪</h1>
         </div>
         <div className="p-6">
           <div className="space-y-4 mb-6 h-[500px] overflow-y-auto pr-4">
