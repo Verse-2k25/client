@@ -8,11 +8,7 @@ const Chatbot = () => {
   const [isLoading, setIsLoading] = useState(false)
   const messagesEndRef = useRef(null)
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
 
-  useEffect(scrollToBottom, [messages])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -24,7 +20,7 @@ const Chatbot = () => {
     setIsLoading(true)
 
     try {
-      const response = await fetch("http://localhost:5000/chat", {
+      const response = await fetch("http://20.244.90.34/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

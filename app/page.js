@@ -1,5 +1,4 @@
 
-
 import { MessageCircle, Music2, Radio, Search, Users } from "lucide-react";
 import { SignInButton, SignOutButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";

@@ -78,10 +78,10 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
                     {/* Navigation Links */}
                     <div className="hidden md:flex items-center justify-center flex-1 space-x-12">
-                        <Link href="/home" className="text-[#E8DED4] hover:text-white text-sm font-medium">
+                        <Link href="/" className="text-[#E8DED4] hover:text-white text-sm font-medium">
                             HOME
                         </Link>
-                        <Link href="/features" className="text-[#E8DED4] hover:text-white text-sm font-medium">
+                        <Link href="/" className="text-[#E8DED4] hover:text-white text-sm font-medium">
                             FEATURES
                         </Link>
                         <Link href="/tune-in" className="text-[#E8DED4] hover:text-white text-sm font-medium">

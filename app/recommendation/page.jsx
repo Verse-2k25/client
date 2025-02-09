@@ -43,7 +43,7 @@ export default function FriendRecommendations() {
           /> */}
           <button
             onClick={fetchRecommendations}
-            className="bg-[#D77E1D]  text-white px-6 py-3 rounded-lg transition duration-200 transform hover:scale-105"
+            className="bg-[#D77E1D] flex justify-center text-white px-6 py-3 rounded-lg transition duration-200 transform hover:scale-105 mx-auto"
           >
             Get Recommendations
           </button>
